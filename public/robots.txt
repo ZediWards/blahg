@@ -1,4 +1,4 @@
-Sitemap: https://https://zediwards.com/sitemap-index.xml
+Sitemap: https://zediwards.com/sitemap-index.xml
 
 User-agent: *
 Disallow:
