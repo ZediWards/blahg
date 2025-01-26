@@ -27,5 +27,5 @@ export const GET = () =>
 				}</updated>`,
 			};
 		}),
-		stylesheet: "/rss-styles.xsl",
+		// stylesheet: "/rss-styles.xsl",
 	});
