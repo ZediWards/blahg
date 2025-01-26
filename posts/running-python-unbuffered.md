@@ -36,25 +36,25 @@ So by setting `flush=True` that would have emptied out the buffer and make it lo
 ## Troubleshooting Steps
 - I ended up adding some logs where some of the print statements were in the API portion of the code. When running the code, the logs were being logged where the print statements were failing to print at the same spot in the code. This let me know it wasn't a script hanging issue at all, it was a print statements not printing issue.  
 
-  - ### Logging example
-    ```python
-    # import module
-    import logging
+### Logging example
+```python
+# import module
+import logging
 
-    # configure logger to append to file with debug level threshold
-    logging.basicConfig(
-        filename="debugging.log",
-        format='%(asctime)s %(message)s',
-        filemode='a',
-        level='DEBUG',
-    )
+# configure logger to append to file with debug level threshold
+logging.basicConfig(
+    filename="debugging.log",
+    format='%(asctime)s %(message)s',
+    filemode='a',
+    level='DEBUG',
+)
 
-    # create logger
-    logger = logging.getLogger()
+# create logger
+logger = logging.getLogger()
 
-    # place debug messages in code where I think it is failing
-    logger.debug('still running before/after x area of code')
-    ```
+# place debug messages in code where I think it is failing
+logger.debug('still running before/after x area of code')
+```  
 - I read up on issues of Python print statements not printing which lead me to Python's default behavior of buffering them in non interactive environments. I could have went through and added `flush=True` to all my print statements or I could run the whole script unbuffered with the `-u` flag.
 
 ## Solution
